@@ -1,0 +1,2383 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+
+    <title>Cеть супермаркетов Small & Skif</title>
+
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css"/>
+
+    <link rel="shortcut icon" href="https://small.kz/favicon.ico" type="image/x-icon">
+
+    <!-- Scripts -->
+
+    <script src="/frontend/js/app.js" defer></script>
+    <!-- Styles -->
+    <link href="/frontend/css/app.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        function loadFirst() {
+            var chosenCity = localStorage.getItem('city');
+            if(chosenCity !== null) {
+                sessionStorage.setItem('city', chosenCity)
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadFirst);
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-NRW3QKB');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-W64HXB2');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177221122-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177221122-1');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js" crossorigin="anonymous"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter33116668 = new Ya.Metrika({ id:33116668, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div>
+            <img src="https://mc.yandex.ru/watch/33116668" style="position:absolute; left:-9999px;" alt=""/>
+        </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRW3QKB"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W64HXB2"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+    <div class="header">
+        <div id="login-modal" class="mfp-hide white-popup-block zoom-anim-dialog">
+            <div id="register-modal" class="mfp-hide white-popup-block zoom-anim-dialog">
+                <h3>Регистрация</h3>
+                <div class="d-block-center-between-wrap">
+                    <form method="POST" name="registerFront" action=https://small.kz/register>
+                        <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                        <div class="inputBl">
+                            <input
+                                    name="name"
+                                    type="text"
+                                    placeholder="Ваше имя"
+                                    required
+                            >
+                        </div>
+
+                        <div class="inputBl">
+                            <input
+                                    name="email"
+                                    type="email"
+                                    placeholder="E-mail"
+                                    required
+                            >
+                        </div>
+
+                        <div class="inputBl">
+                            <input
+                                    name="phone"
+                                    type="text"
+                                    class="phoneNumber"
+                                    placeholder="Номер телефона"
+                                    required
+                            >
+                        </div>
+
+                        <div class="inputBl">
+                            <input
+                                    name="password"
+                                    type="password"
+                                    placeholder="Ваш пароль"
+                                    required
+                            >
+                        </div>
+
+                        <div class="inputBl">
+                            <input
+                                    name="password_confirmation"
+                                    type="password"
+                                    placeholder="Подтвердить пароль"
+                                    required
+                            >
+                        </div>
+
+                        <div class="inputBl">
+                            <input
+                                    name="conf"
+                                    type="checkbox"
+                                    required
+                            />
+                            <label for="conf">
+                                Я подтверждаю, что ознакомлен и согласен с условиями
+                                <a href="https://small.kz/ru/almaty/confidential-terms" style="color: red;">
+                                    Политики конфиденциальности
+                                </a>
+                            </label>
+
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-danger btn-long">
+                                Регистрация
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script>
+
+            </script>
+            <div id="forgot-password-modal" class="mfp-hide white-popup-block zoom-anim-dialog">
+                <h3>Сброс пароля</h3>
+                <div class="d-block-center-between-wrap">
+                    <form method="post" name="forgotPasswordFront" action=https://small.kz/password/email
+                          enctype="multipart/form-data">
+                        <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                        <div class="inputBl">
+                            <input name="email" type="email" placeholder=E-mail required>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-danger btn-long">
+                                Отправить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <h3>Авторизация</h3>
+            <div class="d-block-center-between-wrap">
+                <form method="POST" action="https://small.kz/login" accept-charset="UTF-8" name="loginFront"><input
+                        name="_token" type="hidden" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                    <div class="inputBl">
+                        <input placeholder="E-mail" required name="email" type="text">
+                    </div>
+                    <div class="inputBl">
+                        <input
+                                id="auth_password"
+                                name="password"
+                                type="password"
+                                placeholder="Ваш пароль"
+                                required
+                        >
+                        <label class="unselectable" for="togglePassword">Показать пароль</label>
+                        <input type="checkbox" id="togglePassword"/>
+                    </div>
+                    <div class="d-flex-center-around">
+                        <div class="inputBl">
+                            <a href="#forgot-password-modal" class="text-grey popup-with-move-anim">
+                                Забыли пароль? </a>
+                        </div>
+                        <div class="inputBl">
+                            <a class="text-red popup-with-move-anim" href="#register-modal">
+                                Регистрация </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <input class="btn btn-danger btn-long" type="submit" value="Вход">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="register-modal" class="mfp-hide white-popup-block zoom-anim-dialog">
+            <h3>Регистрация</h3>
+            <div class="d-block-center-between-wrap">
+                <form method="POST" name="registerFront" action=https://small.kz/register>
+                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                    <div class="inputBl">
+                        <input
+                                name="name"
+                                type="text"
+                                placeholder="Ваше имя"
+                                required
+                        >
+                    </div>
+
+                    <div class="inputBl">
+                        <input
+                                name="email"
+                                type="email"
+                                placeholder="E-mail"
+                                required
+                        >
+                    </div>
+
+                    <div class="inputBl">
+                        <input
+                                name="phone"
+                                type="text"
+                                class="phoneNumber"
+                                placeholder="Номер телефона"
+                                required
+                        >
+                    </div>
+
+                    <div class="inputBl">
+                        <input
+                                name="password"
+                                type="password"
+                                placeholder="Ваш пароль"
+                                required
+                        >
+                    </div>
+
+                    <div class="inputBl">
+                        <input
+                                name="password_confirmation"
+                                type="password"
+                                placeholder="Подтвердить пароль"
+                                required
+                        >
+                    </div>
+
+                    <div class="inputBl">
+                        <input
+                                name="conf"
+                                type="checkbox"
+                                required
+                        />
+                        <label for="conf">
+                            Я подтверждаю, что ознакомлен и согласен с условиями
+                            <a href="https://small.kz/ru/almaty/confidential-terms" style="color: red;">
+                                Политики конфиденциальности
+                            </a>
+                        </label>
+
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-danger btn-long">
+                            Регистрация
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+
+        </script>
+
+        <div class="jContainer">
+            <div class="headerContent">
+                <div class="mobileMenuBurger">
+                    <img src="https://small.kz/images/icons/menu-burger.svg" alt="">
+                </div>
+                <div class="logoSearch">
+                    <a class="logo" href="https://small.kz/ru/almaty">
+                        <img
+                                src="https://minio.skiftrade.kz:9000/small-logo/Logo/01/images/Logo_20231130151854_70727.png"
+                                alt=""
+                                width="160"
+                                height=""
+                        >
+
+
+                    </a>
+                    <a class="phone mobileHide" href='tel: 8 800 070 7170
+ '>
+                        8 800 070 7170
+
+                    </a>
+                    <form action="https://small.kz/catalog-goods" method="get" class="searchForm mobileHide">
+                        <div class="input-group">
+                            <input value="" type="text" class="form-control" name="search"
+                                   placeholder="Начните вводить...">
+                        </div>
+                    </form>
+                </div>
+                <div class="headerButtons">
+                    <div class="actionCity mobileHide">
+                        <a href="#city-modal" class="popup-with-move-anim cityBtn">
+    <span class="">
+        Алматы
+    </span>
+                        </a>
+
+                        <div id="ask-city-modal" class="mfp-hide white-popup-block zoom-anim-dialog" aria-hidden="true"
+                             style="width: 250px;">
+                            <h3>Ваш город Алматы ?</h3>
+                            <div class="d-flex-center-between-wrap">
+                                <button class="btn btn-danger" id="closeModalBtn" onclick="">Да</button>
+                                <a href="#city-modal" class="btn btn-default popup-with-move-anim"
+                                   style="color: #158dc7">Нет</a>
+                            </div>
+                        </div>
+
+
+                        <div id="city-modal" class="mfp-hide white-popup-block zoom-anim-dialog">
+                            <h3>Выберите ваш город:</h3>
+                            <div class="d-flex-center-between-wrap">
+
+                                <form id="almaty" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'almaty'); document.getElementById('almaty').submit();">
+                                        Алматы
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=almaty>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="astana" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'astana'); document.getElementById('astana').submit();">
+                                        Астана
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=astana>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="aksu" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'aksu'); document.getElementById('aksu').submit();">
+                                        Аксу
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=aksu>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="almalybak" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'almalybak'); document.getElementById('almalybak').submit();">
+                                        Алмалыбак
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=almalybak>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="asibulak" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'asibulak'); document.getElementById('asibulak').submit();">
+                                        Ашибулак
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=asibulak>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="kunaev" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'kunaev'); document.getElementById('kunaev').submit();">
+                                        Кунаев
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=kunaev>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="karaganda" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'karaganda'); document.getElementById('karaganda').submit();">
+                                        Караганда
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=karaganda>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="koksetau" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'koksetau'); document.getElementById('koksetau').submit();">
+                                        Кокшетау
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=koksetau>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="kostanai" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'kostanai'); document.getElementById('kostanai').submit();">
+                                        Костанай
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=kostanai>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="kyzylorda" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'kyzylorda'); document.getElementById('kyzylorda').submit();">
+                                        Кызылорда
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=kyzylorda>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="pavlodar" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'pavlodar'); document.getElementById('pavlodar').submit();">
+                                        Павлодар
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=pavlodar>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="semei" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'semei'); document.getElementById('semei').submit();">
+                                        Семей
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=semei>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="stepnogorsk" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'stepnogorsk'); document.getElementById('stepnogorsk').submit();">
+                                        Степногорск
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=stepnogorsk>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="talgar" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'talgar'); document.getElementById('talgar').submit();">
+                                        Талгар
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=talgar>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="taldykorgan" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'taldykorgan'); document.getElementById('taldykorgan').submit();">
+                                        Талдыкорган
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=taldykorgan>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="taraz" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'taraz'); document.getElementById('taraz').submit();">
+                                        Тараз
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=taraz>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="ekibastuz" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'ekibastuz'); document.getElementById('ekibastuz').submit();">
+                                        Экибастуз
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=ekibastuz>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                                <form id="kaskelen" action="https://small.kz/city" method="post">
+                                    <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1">
+                                    <a href="javascript:;"
+                                       onclick="localStorage.setItem('city', 'kaskelen'); document.getElementById('kaskelen').submit();">
+                                        Каскелен
+                                    </a>
+                                    <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                    <input type="hidden" name="city" value=kaskelen>
+                                    <input type="hidden" name="payload" value=catalog-goods>
+                                </form>
+
+
+                            </div>
+                        </div>
+
+                        <div class="langLink">
+                            <p>
+                                РУС
+                            </p>
+                            <div class="langLinkBox">
+                                <a href="https://small.kz/kk/almaty/catalog-goods">Казақша</a>
+                                <a href="https://small.kz/ru/almaty/catalog-goods">Русский</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="mobileHide navigation">
+                        <a class="headerLogin popup-with-move-anim" href="#login-modal">
+                            <img src="https://small.kz/images/icons/user-icon.svg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="mobileSearch mobileFlexShow">
+                    <img src="https://small.kz/images/icons/search-grey.svg" class="mobileSearchBtn" alt="">
+                    <a class="popup-with-move-anim mobileLoginBtn" href="#login-modal">
+                        <img src="https://small.kz/images/icons/user-icon.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="jContainer mobileHide">
+            <div>
+                <ul class="navigation">
+                    <div class="mobileLoginShow">
+                        <div class="mobile-menu-space-between">
+                            <img class="close-mobile-menu" src="/images/icons/close-thin-grey.svg" alt="">
+                            <div class="actionCity">
+                                <div class="langLink">
+                                    <p>
+                                        РУС
+                                    </p>
+                                    <div class="langLinkBox">
+                                        <a href="https://small.kz/kk/almaty/catalog-goods">Казақша</a>
+                                        <a href="https://small.kz/ru/almaty/catalog-goods">Русский</a>
+                                    </div>
+                                </div>
+
+
+                                <a href="#city-modal" class="popup-with-move-anim cityBtn">
+    <span class="">
+        Алматы
+    </span>
+                                </a>
+
+                                <div id="ask-city-modal" class="mfp-hide white-popup-block zoom-anim-dialog"
+                                     aria-hidden="true" style="width: 250px;">
+                                    <h3>Ваш город Алматы ?</h3>
+                                    <div class="d-flex-center-between-wrap">
+                                        <button class="btn btn-danger" id="closeModalBtn" onclick="">Да</button>
+                                        <a href="#city-modal" class="btn btn-default popup-with-move-anim"
+                                           style="color: #158dc7">Нет</a>
+                                    </div>
+                                </div>
+
+
+                                <div id="city-modal" class="mfp-hide white-popup-block zoom-anim-dialog">
+                                    <h3>Выберите ваш город:</h3>
+                                    <div class="d-flex-center-between-wrap">
+
+                                        <form id="almaty" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'almaty'); document.getElementById('almaty').submit();">
+                                            Алматы
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=almaty>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="astana" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'astana'); document.getElementById('astana').submit();">
+                                            Астана
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=astana>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="aksu" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'aksu'); document.getElementById('aksu').submit();">
+                                            Аксу
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=aksu>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="almalybak" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'almalybak'); document.getElementById('almalybak').submit();">
+                                            Алмалыбак
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=almalybak>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="asibulak" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'asibulak'); document.getElementById('asibulak').submit();">
+                                            Ашибулак
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=asibulak>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="kunaev" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'kunaev'); document.getElementById('kunaev').submit();">
+                                            Кунаев
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=kunaev>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="karaganda" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'karaganda'); document.getElementById('karaganda').submit();">
+                                            Караганда
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=karaganda>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="koksetau" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'koksetau'); document.getElementById('koksetau').submit();">
+                                            Кокшетау
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=koksetau>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="kostanai" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'kostanai'); document.getElementById('kostanai').submit();">
+                                            Костанай
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=kostanai>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="kyzylorda" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'kyzylorda'); document.getElementById('kyzylorda').submit();">
+                                            Кызылорда
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=kyzylorda>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="pavlodar" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'pavlodar'); document.getElementById('pavlodar').submit();">
+                                            Павлодар
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=pavlodar>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="semei" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'semei'); document.getElementById('semei').submit();">
+                                            Семей
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=semei>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="stepnogorsk" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'stepnogorsk'); document.getElementById('stepnogorsk').submit();">
+                                            Степногорск
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=stepnogorsk>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="talgar" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'talgar'); document.getElementById('talgar').submit();">
+                                            Талгар
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=talgar>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="taldykorgan" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'taldykorgan'); document.getElementById('taldykorgan').submit();">
+                                            Талдыкорган
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=taldykorgan>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="taraz" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'taraz'); document.getElementById('taraz').submit();">
+                                            Тараз
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=taraz>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="ekibastuz" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'ekibastuz'); document.getElementById('ekibastuz').submit();">
+                                            Экибастуз
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=ekibastuz>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                        <form id="kaskelen" action="https://small.kz/city" method="post">
+                                            <input type="hidden" name="_token"
+                                                   value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                                href="javascript:;"
+                                                onclick="localStorage.setItem('city', 'kaskelen'); document.getElementById('kaskelen').submit();">
+                                            Каскелен
+                                        </a>
+                                            <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                            <input type="hidden" name="city" value=kaskelen>
+                                            <input type="hidden" name="payload" value=catalog-goods>
+                                        </form>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <a class="popup-with-move-anim mobileLoginBtn" href="#login-modal">
+                                <img src="https://small.kz/images/icons/user-icon.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <li class="dropdown-nav">
+                        <a class="link-nav"
+                           href=https://small.kz/ru/almaty/catalog-goods
+                        >
+                            Каталог скидок
+                        </a>
+                    </li>
+                    <li class="dropdown-nav">
+                        <a class="link-nav"
+                           href=#
+                        >
+                            Покупателям
+                        </a>
+                        <ul class="dropdown" style="display: none">
+                            <li>
+                                <a href=https://small.kz/ru/almaty/catalogs>Каталог</a>
+                            </li>
+                            <li>
+                                <a href=https://small.kz/ru/almaty/stocks>Акции</a>
+                            </li>
+                            <li>
+                                <a href=https://small.kz/ru/almaty/shops>Магазины</a>
+                            </li>
+                            <li>
+                                <a href=https://small.kz/ru/almaty/opt>Оптовик</a>
+                            </li>
+                            <li>
+                                <a href=https://small.kz/ru/almaty/miratorg>Готовим вместе</a>
+                            </li>
+                            <li>
+                                <a href=https://small.kz/ru/almaty/glovo-partner>Доставка Glovo</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-nav">
+                        <a class="link-nav"
+                           href=https://small.kz/ru/almaty/job
+                        >
+                            Карьера
+                        </a>
+                    </li>
+                    <li class="dropdown-nav">
+                        <a class="link-nav"
+                           href=https://small.kz/ru/almaty/about-us
+                        >
+                            О нас
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="sContainer searchToggleMobile">
+            <form action="https://small.kz/catalog-goods" method="get" class="searchForm">
+                <div class="input-group">
+                    <input value="" type="text" class="form-control" name="search" placeholder="Поиск товара">
+                </div>
+            </form>
+        </div>
+    </div>
+</header>
+<div class="overlay" style="display: none;"></div>
+<div class="minMenu">
+    <ul class="minMenuCat navigation">
+        <div class="mobileLoginShow">
+            <div class="mobile-menu-space-between">
+                <img class="close-mobile-menu" src="/images/icons/close-thin-grey.svg" alt="">
+                <div class="actionCity">
+                    <div class="langLink">
+                        <p>
+                            РУС
+                        </p>
+                        <div class="langLinkBox">
+                            <a href="https://small.kz/kk/almaty/catalog-goods">Казақша</a>
+                            <a href="https://small.kz/ru/almaty/catalog-goods">Русский</a>
+                        </div>
+                    </div>
+
+
+                    <a href="#city-modal" class="popup-with-move-anim cityBtn">
+    <span class="">
+        Алматы
+    </span>
+                    </a>
+
+                    <div id="ask-city-modal" class="mfp-hide white-popup-block zoom-anim-dialog" aria-hidden="true"
+                         style="width: 250px;">
+                        <h3>Ваш город Алматы ?</h3>
+                        <div class="d-flex-center-between-wrap">
+                            <button class="btn btn-danger" id="closeModalBtn" onclick="">Да</button>
+                            <a href="#city-modal" class="btn btn-default popup-with-move-anim" style="color: #158dc7">Нет</a>
+                        </div>
+                    </div>
+
+
+                    <div id="city-modal" class="mfp-hide white-popup-block zoom-anim-dialog">
+                        <h3>Выберите ваш город:</h3>
+                        <div class="d-flex-center-between-wrap">
+
+                            <form id="almaty" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'almaty'); document.getElementById('almaty').submit();">
+                                Алматы
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=almaty>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="astana" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'astana'); document.getElementById('astana').submit();">
+                                Астана
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=astana>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="aksu" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'aksu'); document.getElementById('aksu').submit();">
+                                Аксу
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=aksu>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="almalybak" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'almalybak'); document.getElementById('almalybak').submit();">
+                                Алмалыбак
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=almalybak>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="asibulak" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'asibulak'); document.getElementById('asibulak').submit();">
+                                Ашибулак
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=asibulak>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="kunaev" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'kunaev'); document.getElementById('kunaev').submit();">
+                                Кунаев
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=kunaev>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="karaganda" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'karaganda'); document.getElementById('karaganda').submit();">
+                                Караганда
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=karaganda>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="koksetau" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'koksetau'); document.getElementById('koksetau').submit();">
+                                Кокшетау
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=koksetau>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="kostanai" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'kostanai'); document.getElementById('kostanai').submit();">
+                                Костанай
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=kostanai>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="kyzylorda" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'kyzylorda'); document.getElementById('kyzylorda').submit();">
+                                Кызылорда
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=kyzylorda>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="pavlodar" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'pavlodar'); document.getElementById('pavlodar').submit();">
+                                Павлодар
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=pavlodar>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="semei" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'semei'); document.getElementById('semei').submit();">
+                                Семей
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=semei>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="stepnogorsk" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'stepnogorsk'); document.getElementById('stepnogorsk').submit();">
+                                Степногорск
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=stepnogorsk>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="talgar" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'talgar'); document.getElementById('talgar').submit();">
+                                Талгар
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=talgar>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="taldykorgan" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'taldykorgan'); document.getElementById('taldykorgan').submit();">
+                                Талдыкорган
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=taldykorgan>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="taraz" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'taraz'); document.getElementById('taraz').submit();">
+                                Тараз
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=taraz>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="ekibastuz" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'ekibastuz'); document.getElementById('ekibastuz').submit();">
+                                Экибастуз
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=ekibastuz>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                            <form id="kaskelen" action="https://small.kz/city" method="post">
+                                <input type="hidden" name="_token" value="Lphk3wbRAE1IQCOkfHj9ypGv2jD2a0LlLZKC6sG1"> <a
+                                    href="javascript:;"
+                                    onclick="localStorage.setItem('city', 'kaskelen'); document.getElementById('kaskelen').submit();">
+                                Каскелен
+                            </a>
+                                <!--                <a href="javascript:;" onclick="document.getElementById('form1').submit();"><%=n%></a>-->
+                                <input type="hidden" name="city" value=kaskelen>
+                                <input type="hidden" name="payload" value=catalog-goods>
+                            </form>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <a class="popup-with-move-anim mobileLoginBtn" href="#login-modal">
+                    <img src="https://small.kz/images/icons/user-icon.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <li class="dropdown-nav">
+            <a class="link-nav"
+               href=https://small.kz/ru/almaty/catalog-goods
+            >
+                Каталог скидок
+            </a>
+        </li>
+        <li class="dropdown-nav">
+            <a class="link-nav"
+               href=#
+            >
+                Покупателям
+            </a>
+            <ul class="dropdown" style="display: none">
+                <li>
+                    <a href=https://small.kz/ru/almaty/catalogs>Каталог</a>
+                </li>
+                <li>
+                    <a href=https://small.kz/ru/almaty/stocks>Акции</a>
+                </li>
+                <li>
+                    <a href=https://small.kz/ru/almaty/shops>Магазины</a>
+                </li>
+                <li>
+                    <a href=https://small.kz/ru/almaty/opt>Оптовик</a>
+                </li>
+                <li>
+                    <a href=https://small.kz/ru/almaty/miratorg>Готовим вместе</a>
+                </li>
+                <li>
+                    <a href=https://small.kz/ru/almaty/glovo-partner>Доставка Glovo</a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown-nav">
+            <a class="link-nav"
+               href=https://small.kz/ru/almaty/job
+            >
+                Карьера
+            </a>
+        </li>
+        <li class="dropdown-nav">
+            <a class="link-nav"
+               href=https://small.kz/ru/almaty/about-us
+            >
+                О нас
+            </a>
+        </li>
+
+
+    </ul>
+</div>
+<main>
+    <section class="goodsCatalogBl">
+        <div class="jContainer">
+            <div class="goodsCatalogHeader">
+                <div class="goodsCatalogTitle">
+                    <h2>Каталог скидок</h2>
+                </div>
+                <button class="goodsCatalogBtn btnMain btnMain--redBorder">Скрыть фильтры</button>
+            </div>
+            <div class="goodsCatalogBody">
+                <div class="goodsCatalogBodyLeft">
+                    <div class="asideFilters">
+                        <form class="goodsFilters" method="get" action="https://small.kz/ru/almaty/catalog-goods">
+                            <div class="goodsFiltersHeader">
+                                <span class="filters mobileShow">Фильтры</span>
+                                <div class="mobileShow closeMobileFilter">
+                                    <img src="https://small.kz/images/icons/close-aside.png" alt="">
+                                </div>
+                            </div>
+
+
+                            <div class="goodsFilter">
+                                <div class="goodsFilterTitle">
+                                    <span>Категория</span>
+                                    <img src="https://small.kz/images/icons/arrow-small-down-black.svg" alt="">
+                                </div>
+                                <div class="goodsFilterOptions" style=display:none>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="1"
+                                                class="checkbox-control"
+                                                id="category-1"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-1">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Бакалея</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="2"
+                                                class="checkbox-control"
+                                                id="category-2"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-2">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Консервация</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="3"
+                                                class="checkbox-control"
+                                                id="category-3"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-3">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Колбаса, деликатесы</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="4"
+                                                class="checkbox-control"
+                                                id="category-4"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-4">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Молочные продукты, яйцо</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="5"
+                                                class="checkbox-control"
+                                                id="category-5"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-5">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Мясо, птица, рыба</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="6"
+                                                class="checkbox-control"
+                                                id="category-6"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-6">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Заморозка</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="7"
+                                                class="checkbox-control"
+                                                id="category-7"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-7">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Напитки</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="10"
+                                                class="checkbox-control"
+                                                id="category-10"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-10">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Чай, кофе</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="11"
+                                                class="checkbox-control"
+                                                id="category-11"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-11">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Сладости</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="13"
+                                                class="checkbox-control"
+                                                id="category-13"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-13">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Здоровое питание</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="14"
+                                                class="checkbox-control"
+                                                id="category-14"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-14">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Соусы</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="15"
+                                                class="checkbox-control"
+                                                id="category-15"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-15">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Снеки</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="16"
+                                                class="checkbox-control"
+                                                id="category-16"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-16">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Товары для детей</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="17"
+                                                class="checkbox-control"
+                                                id="category-17"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-17">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Бытовая химия и косметика</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="28"
+                                                class="checkbox-control"
+                                                id="category-28"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-28">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Гигиена</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="29"
+                                                class="checkbox-control"
+                                                id="category-29"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-29">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Для дома</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="30"
+                                                class="checkbox-control"
+                                                id="category-30"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-30">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Для животных</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="31"
+                                                class="checkbox-control"
+                                                id="category-31"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-31">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Подарки</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="33"
+                                                class="checkbox-control"
+                                                id="category-33"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-33">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Кондитерские изделия</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="34"
+                                                class="checkbox-control"
+                                                id="category-34"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-34">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Игрушки</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="8"
+                                                class="checkbox-control"
+                                                id="category-8"
+                                                type="checkbox"
+                                                name="category[]"
+
+                                        >
+                                        <label class="checkbox-label" for="category-8">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Кулинария</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goodsFilter">
+                                <div class="goodsFilterTitle">
+                                    <span>Сортировка</span>
+                                    <img src="https://small.kz/images/icons/arrow-small-down-black.svg" alt="">
+                                </div>
+                                <div class="goodsFilterOptions" style=display:none>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="1"
+                                                class="radio"
+                                                id="sort-1"
+                                                type="radio"
+                                                name="sort"
+
+                                        >
+                                        <label class="radio-label" for="sort-1">
+                                            <span class="checkbox-text">по увеличению цены</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="2"
+                                                class="radio"
+                                                id="sort-2"
+                                                type="radio"
+                                                name="sort"
+
+                                        >
+                                        <label class="radio-label" for="sort-2">
+                                            <span class="checkbox-text">по уменьшению цены</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="3"
+                                                class="radio"
+                                                id="sort-3"
+                                                type="radio"
+                                                name="sort"
+
+                                        >
+                                        <label class="radio-label" for="sort-3">
+                                            <span class="checkbox-text">по увеличению скидки</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="4"
+                                                class="radio"
+                                                id="sort-4"
+                                                type="radio"
+                                                name="sort"
+
+                                        >
+                                        <label class="radio-label" for="sort-4">
+                                            <span class="checkbox-text">по уменьшению скидки</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goodsFilter">
+                                <div class="goodsFilterTitle">
+                                    <span>Тип скидки</span>
+                                    <img src="https://small.kz/images/icons/arrow-small-down-black.svg" alt="">
+                                </div>
+                                <div class="goodsFilterOptions" style=display:none>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="1"
+                                                class="checkbox-control"
+                                                id="sale-1"
+                                                type="checkbox"
+                                                name="sale_type[]"
+
+                                        >
+                                        <label class="checkbox-label" for="sale-1">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Без скидки</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="2"
+                                                class="checkbox-control"
+                                                id="sale-2"
+                                                type="checkbox"
+                                                name="sale_type[]"
+
+                                        >
+                                        <label class="checkbox-label" for="sale-2">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Акция</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="3"
+                                                class="checkbox-control"
+                                                id="sale-3"
+                                                type="checkbox"
+                                                name="sale_type[]"
+
+                                        >
+                                        <label class="checkbox-label" for="sale-3">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Взрывные скидки</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox">
+                                        <input
+                                                value="9"
+                                                class="checkbox-control"
+                                                id="sale-9"
+                                                type="checkbox"
+                                                name="sale_type[]"
+
+                                        >
+                                        <label class="checkbox-label" for="sale-9">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text">Сочные скидки</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goodsFilter">
+                                <div class="resetFilters">
+                                    <a href="https://small.kz/catalog-goods">Сбросить все</a>
+                                </div>
+                                <div class="applyFilters mobileShow">
+                                    <button type="submit" class="applyFiltersBtn">Применить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <a href="https://small.kz/ru/almaty/catalogs" class="catalogViewLink">
+                        <div class="catalogView">
+                            <div class="catalogPreview">
+                                <img src="https://small.kz/storage/images/catalog/65826119c8102.jpg" alt="">
+                            </div>
+                            <div class="catalogInfo">
+                                <div class="catalogInfoBanner">
+                                    Смотреть свежий каталог
+                                    <img src="https://small.kz/images/icons/arrow-thin-right.svg" alt="">
+                                </div>
+                                20.12 - 02.01
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="goodsCatalogBodyRight">
+                    <a href="https://small.kz/ru/almaty/catalogs" class="catalogRead">
+                        <img src="https://small.kz/images/arrow-thin-right.svg" alt="">
+                        <img src="https://small.kz/images/fresh-catalog-banner.png" alt="">
+
+                    </a>
+                    <div class="mobileFilterBtn mobileShow">
+                        Фильтры
+                    </div>
+                    <div class="infinite-scroll">
+                        <div class="goods">
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/4605093010958.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -20%
+                                                </div>
+                                                <div class="activePrice">255</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            320
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        ПАССИМ
+                                        <br>
+                                        Хлопья овсяные &quot;геркулес&quot; 400 гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/6931274602017.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -10%
+                                                </div>
+                                                <div class="activePrice">349</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            389
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        МАСТЕР КАН
+                                        <br>
+                                        Лапша тушеная говядина кан ши фу 85 гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/4601780005399.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -33%
+                                                </div>
+                                                <div class="activePrice">499</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            750
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        МАКФА
+                                        <br>
+                                        КРУПА ГРЕЧНЕВАЯ 800гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/4601780010829.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -20%
+                                                </div>
+                                                <div class="activePrice">379</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            475
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        МАКФА
+                                        <br>
+                                        Крупа кукурузная 700гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/4605093001758.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -29%
+                                                </div>
+                                                <div class="activePrice">829</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            1160
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        ПАССИМ
+                                        <br>
+                                        Рис длиннозерный азиатский 800гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/8076809575942.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -32%
+                                                </div>
+                                                <div class="activePrice">525</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            770
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        BARILLA
+                                        <br>
+                                        Макароны bavette 450 гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/8076809576079.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -27%
+                                                </div>
+                                                <div class="activePrice">525</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            720
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        BARILLA
+                                        <br>
+                                        Макароны PENNE RIGATE 450 гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/4870144170213.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -13%
+                                                </div>
+                                                <div class="activePrice">279</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            320
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        ELSYOR
+                                        <br>
+                                        Лапша яичная для супа тонкая №1 210 гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/4870001220266.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -26%
+                                                </div>
+                                                <div class="activePrice">285</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            385
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        КЭММИ
+                                        <br>
+                                        Лапша яичная бесбармачная 250гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/4601780000578.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -34%
+                                                </div>
+                                                <div class="activePrice">255</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            389
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        МАКФА
+                                        <br>
+                                        Макароны вермишель длинная оригинал 400гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/4601780006976.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -34%
+                                                </div>
+                                                <div class="activePrice">255</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            389
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        МАКФА
+                                        <br>
+                                        МАКАРОНЫ ВЕРМИШЕЛЬ 400гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+                            <div class="good">
+                                <div class="goodPreview">
+                                    <div class="goodMainImage">
+                                        <img
+                                                class="goodImage"
+                                                src="/images/catalog/01_grocery/4601780010508.png"
+                                                alt=""
+                                                onerror="this.onerror=null; this.src='/images/default-good.png'"
+                                        >
+                                    </div>
+
+
+                                    <div class="priceInfoWrapper">
+                                        <div class="priceInfo">
+                                            <img src="https://small.kz/images/icons/stock-price-background.svg" alt="">
+                                            <div class="goodPrice goodStock">
+                                                <div class="salePercent">
+                                                    -34%
+                                                </div>
+                                                <div class="activePrice">255</div>
+                                                <div class="oldPrice">
+                                                        <span>
+                                                            389
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goodInfo">
+                                    <p>
+                                        МАКФА
+                                        <br>
+                                        Макароны вермишель длинная любительская 400гр
+                                    </p>
+                                    <span class="grey">20.12 - 02.01</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <nav>
+                        <ul class="pagination">
+
+                            <li class="page-item disabled" aria-disabled="true" aria-label="&laquo; Назад">
+                                <span class="page-link" aria-hidden="true">&lsaquo;</span>
+                            </li>
+
+
+                            <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=2">2</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=3">3</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=4">4</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=5">5</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=6">6</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=7">7</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=8">8</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=9">9</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=10">10</a></li>
+
+                            <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span></li>
+
+
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=66">66</a></li>
+                            <li class="page-item"><a class="page-link"
+                                                     href="http://small.kz/ru/almaty/catalog-goods?page=67">67</a></li>
+
+
+                            <li class="page-item">
+                                <a class="page-link" href="http://small.kz/ru/almaty/catalog-goods?page=2" rel="next"
+                                   aria-label="Вперёд &raquo;">&rsaquo;</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="goodsNotification">
+                        SMALL оставляет за собой право изменять цены в период действия акции. Фото товаров в каталоге
+                        могут отличаться от товаров в продаже, количество товаров по акции ограничено.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="f-footer">
+        <div class="jContainer">
+            <div class="footerContainer">
+                <div class="menuFooter">
+                    <ul>
+                        <li class="mainMenu">Покупателям</li>
+
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/catalogs>
+                                Каталог
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/stocks>
+                                Акции
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/shops>
+                                Магазины
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/opt>
+                                Оптовик
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="mainMenu"><a href=https://small.kz/ru/almaty/partners>Бизнесу</a></li>
+
+                        <li class="childMenu">
+                            <a href=https://partners.small.kz/>
+                                Партнерство
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/advert>
+                                Реклама
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/rent/info>
+                                Сдать нам площадь
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/rent/add>
+                                Снять у нас площадь
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a class="popup-with-move-anim" href='#login-modal'>
+                                Выписать ЭСФ
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="mainMenu">Компания</li>
+
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/about-us>
+                                О нас
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/news>
+                                Новости
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/contacts>
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="mainMenu"><a href=https://small.kz/ru/almaty/job>Работа в SMALL</a></li>
+
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/kitchen>
+                                Кухня SMALL
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/our-kazakhstan>
+                                Мой Казахстан
+                            </a>
+                        </li>
+                        <li class="childMenu">
+                            <a href=https://small.kz/ru/almaty/eco>
+                                Eco SMALL
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="footerLinks">
+                    <div class="actionBl">
+                        <a class="btnGrey" href=https://small.kz/ru/almaty/faq-new>Обратная связь</a>
+                    </div>
+                    <div class="contactInfo">
+                        <a class="phone" href='tel: 8 800 070 7170
+ '>
+                            8 800 070 7170
+
+                        </a>
+                        <p>Звоните нам каждый день c 09:00 до 20:00 бесплатно</p>
+                    </div>
+                    <div class="socialLinks">
+                        <a class="socnet-link" target="_blank" href=https://www.instagram.com/small.skif/
+ target="_blank">
+                            <img src="https://small.kz/images/icons/social/instagram-light.svg" alt="">
+                        </a>
+                        <a class="socnet-link" target="_blank"
+                           href="https://www.youtube.com/channel/UC4znsimYVezD13rG3h_Fxmg">
+                            <img src="https://small.kz/images/icons/social/youtube-light.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBottom">
+                <div class="companyBin">
+                    ТОО СКИФ ТРЕЙД БИН <br> 020340002288
+                </div>
+                <div class="companyConfPol">
+                    <a href="https://small.kz/ru/almaty/confidential-terms">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
