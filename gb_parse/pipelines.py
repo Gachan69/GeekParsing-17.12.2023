@@ -2,12 +2,22 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-
-
+import pymongo
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
 
 class GbParsePipeline:
     def process_item(self, item, spider):
+        return item
+
+
+class GbParseMongoPipeline:
+
+    def __init__(self):
+        client = pymongo.MongoClient('mongodb+srv://Daniel:BAM-7351@atlascluster.afucu8k.mongodb.net/')
+        self.db = client['geek_parsing']
+
+    def process_item(self, item, spider):
+        self.db[spider.name].insert_one(item)
         return item

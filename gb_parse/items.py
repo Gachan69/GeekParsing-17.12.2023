@@ -10,3 +10,11 @@ class GbParseItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
+
+
+class Gba4frag(scrapy.item):
+    item = scrapy.Field()
+    product = scrapy.Field()
+    price = scrapy.Field()
+    description = scrapy.Field()
+    stats = scrapy.Field()
