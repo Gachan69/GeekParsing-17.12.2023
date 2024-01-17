@@ -19,5 +19,5 @@ class GbParseMongoPipeline:
         self.db = client['geek_parsing']
 
     def process_item(self, item, spider):
-        self.db[spider.name].insert_one(item)
+        self.db[spider.name].insert_one(dict(item))
         return item
