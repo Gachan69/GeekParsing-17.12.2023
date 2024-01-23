@@ -28,7 +28,7 @@ def get_stats(item):
 class A4fragLoader(ItemLoader):
     default_item_class = Gba4fragItem
     url_out = TakeFirst()
-    photo_out = TakeFirst()
+    # photo_out = TakeFirst()
     product_out = TakeFirst()
     item_out = Compose(lambda v: v[1], str.strip)
     price_out = TakeFirst()
