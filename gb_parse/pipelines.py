@@ -17,7 +17,7 @@ class GbParsePipeline:
 class GbParseMongoPipeline:
 
     def __init__(self):
-        client = pymongo.MongoClient('mongodb+srv://Daniel:BAM-7351@atlascluster.afucu8k.mongodb.net/')
+        client = pymongo.MongoClient('mongodb+srv://Daniel:-p@atlascluster.afucu8k.mongodb.net/')
         self.db = client['geek_parsing']
 
     def process_item(self, item, spider):
