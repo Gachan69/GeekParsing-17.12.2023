@@ -69,8 +69,7 @@ if __name__ == '__main__':
     url = 'https://small.kz/ru/almaty/catalog-goods'
 
     save_path = get_save_path('small_product')
-    # db_client = pymongo.MongoClient('mongodb://login:password@localhost:27017/db_name')
-    db_client = pymongo.MongoClient('mongodb+srv://Daniel:BAM-7351@atlascluster.afucu8k.mongodb.net/')
+   
 
     parser = SmallParse(url, db_client)
     parser.run()
